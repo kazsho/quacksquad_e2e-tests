@@ -5,13 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "coverage": "jest --coverage",
     "setup-db": "node test_database/setup.js"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "./__tests__/helpers/*"
+    ]
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.3",
     "jest": "^29.7.0",
+    "jsdom": "^24.0.0",
     "pg": "^8.11.3"
   }
 }
